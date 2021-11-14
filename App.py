@@ -29,12 +29,14 @@ def log(function):
 
 # Function that loads the dataset into a dataframe
 
+@st.cache
 def load_data(nrows):
     df = pd.read_csv(DATA_URL,nrows=nrows)
     return df
 
 # Function that cleans the dataframe
 
+@st.cache
 def clean_data(df_):
     df = df_.copy()
     df.adresse_code_voie=df.adresse_code_voie.astype(str)
@@ -208,13 +210,25 @@ def nullity_plot(df):
     st.bar_chart(data)
 
 def main():
+    st.set_page_config(
+        page_title="App valeurs foncieres",
+        page_icon="random",
+        layout="wide",
+        initial_sidebar_state="expanded",
+        menu_items={
+            'Get Help': 'https://www.extremelycoolapp.com/help',
+            'Report a bug': "https://www.extremelycoolapp.com/bug",
+            'About': "# Data Exploration. This is an *extremely* cool app!"
+        }
+    )
     st.sidebar.title("Currently streaming with ❤")
     genre = st.sidebar.radio("👇",('Analysis description', 'Lookup Analysis'))
     st.sidebar.write(" ")
     st.sidebar.write(" ")
     st.sidebar.markdown("Made by [Emile.E](https://github.com/ekane3)")
-
+    
     if genre == 'Analysis description':
+        st.balloons()
         description_analysis()
     else:
         title_bar()
