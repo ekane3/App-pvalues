@@ -120,12 +120,10 @@ def show_head(df):
     if st.checkbox("Check to show raw data"):
         st.subheader("Raw data")
         st.write(df.head(10))
-
     st.markdown("****")
 
 def get_communs(df):
     return df.nom_commune.value_counts().index
-
 
 def type_location_by_communs(values):
     df, commune = values
