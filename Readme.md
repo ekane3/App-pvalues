@@ -12,7 +12,7 @@ To do a good data exploration we had to pass by several steps such as : the load
 
 # 1 - Data loading
 Normally to load the data we use the method read_csv of [pandas](https://pandas.pydata.org/) library by passing the path of the file.
-Our file normally is in our folder called full_data.csv.But to the huge size of the file , we couldnt upload it on github so we had to download it from this [data.gouv.fr](https://jtellier.fr/DataViz/full_2020.csv) website.  
+Our file normally is in our folder called full_data.csv.But to the huge size of the file , we couldnt upload it on github so we had to download it from  [jtellier](https://jtellier.fr/DataViz/full_2020.csv) website.  
 We loaded up to 1 million rows of data in our dataframe.
 
 <br>

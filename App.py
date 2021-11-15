@@ -14,7 +14,7 @@ import time
 import datetime
 
 
-DATA_URL = #Connecting to endpoint to get csv file 
+DATA_URL = "https://jtellier.fr/DataViz/full_2020.csv" #Connecting to endpoint to get csv file 
 
 # Function that logs in a file the time execution interval in seconds
 def log(function):
