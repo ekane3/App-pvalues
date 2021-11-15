@@ -198,7 +198,7 @@ def plot_map(df_):
     points = get_points_by_months((df_,start_date, end_date))
     col1, col2 = st.columns(2)
     #col1.st.write("")
-    col1.metric("Nombre de transactions sur cette période :", len(points))
+    col1.metric("Nombre de transactions sur cette période :", len(points),"578325")
     st.map(points)
 
 
